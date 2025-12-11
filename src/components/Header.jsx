@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.leftContainer}
-         onPress={()=>{ navigation.navigate('Home') }}>
+         onPress={()=>{ navigation.navigate('Popular') }}>
         <Text style={styles.logoText}>Logo</Text>
         </TouchableOpacity>
 

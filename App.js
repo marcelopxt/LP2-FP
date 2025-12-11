@@ -4,10 +4,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Header from "./src/components/Header";
-import Home from "./src/screens/Home";
-import Edit from "./src/screens/Edit";
-import Show from "./src/screens/Show";
-import Create from "./src/screens/Create";
+import Popular from "./src/screens/Popular";
+import Library from "./src/screens/Library";
+import Dashboard from "./src/screens/Dashboard";
 
 export default function App() {
   const Tab = createBottomTabNavigator();
@@ -24,24 +23,19 @@ export default function App() {
           }}
         >
           <Tab.Screen
-            name="Home"
-            component={Home}
-            options={{ tabBarLabel: "Início" }}
+            name="Popular"
+            component={Popular}
+            options={{ tabBarLabel: "Popular" }}
           />
           <Tab.Screen
-            name="Create"
-            component={Create}
-            options={{ tabBarLabel: "Cadastrar" }}
+            name="Dashboard"
+            component={Dashboard}
+            options={{ tabBarLabel: "Dashboard" }}
           />
           <Tab.Screen
-            name="Show"
-            component={Show}
-            options={{ tabBarLabel: "Visualizar" }}
-          />
-          <Tab.Screen
-            name="Edit"
-            component={Edit}
-            options={{ tabBarLabel: "Editar" }}
+            name="Library"
+            component={Library}
+            options={{ tabBarLabel: "Library" }}
           />
         </Tab.Navigator>
       </NavigationContainer>

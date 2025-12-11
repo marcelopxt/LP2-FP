@@ -103,7 +103,7 @@ Aqui está um diagrama conceitual de como os dados fluem entre a API, o seu arma
 
 ### Fase 1: Configuração e API
 
-1. Crie o projeto (Vite/React ou Create React App).
+1. Crie o projeto (Vite/React ou Dashboard React App).
 2. Cadastre-se na [RAWG.io](https://rawg.io/apidocs) e pegue sua API Key.
 3. Crie um serviço simples (`api.js`) para buscar jogos por nome.
 
@@ -166,3 +166,9 @@ Para ficar bonito no portfólio/trabalho:
 - **Cards:** `#1E1E1E` (Lighter Grey)
 - **Acento/Botões:** `#7000FF` (Roxo Neon) ou `#00FF9D` (Verde Cyberpunk)
 - **Texto:** `#E0E0E0`
+
+
+
+
+### CHAVE API
+# c0c4d37b298f40fc83e906c279bbe0f2
