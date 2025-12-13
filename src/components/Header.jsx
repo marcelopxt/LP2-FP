@@ -1,16 +1,23 @@
 import { useNavigation } from "@react-navigation/native";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native"; 
+import { StyleSheet, Text, TouchableOpacity, View, Platform, StatusBar } from "react-native"; 
+import { Ionicons } from '@expo/vector-icons';
+
 export default function Header() {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.leftContainer}
-         onPress={()=>{ navigation.navigate('Popular') }}>
-        <Text style={styles.logoText}>Logo</Text>
-        </TouchableOpacity>
+      <StatusBar barStyle="light-content" backgroundColor="#121212" />
+
+      <TouchableOpacity 
+         style={styles.leftContainer}
+         onPress={() => navigation.navigate('Popular')}
+      >
+        <Ionicons name="terminal" size={24} color="#00FF9D" />
+      </TouchableOpacity>
 
       <View style={styles.titleContainer}>
-        <Text style={styles.titleText}>Title Here</Text>
+        <Text style={styles.titleText}>SAVE_POINT_SYSTEM</Text>
       </View>
     </View>
   );
@@ -19,30 +26,33 @@ export default function Header() {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    height: 80,
+    height: 90,
     flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 15,
-    paddingTop: 25,
+    alignItems: 'flex-end', 
+    paddingHorizontal: 20,
+    paddingBottom: 15,
+    backgroundColor: '#121212',
+    borderBottomWidth: 1,
+    borderBottomColor: '#00FF9D',
   },
   leftContainer: {
     zIndex: 1,
-  },
-  logoText: {
-    fontWeight: 'bold',
   },
   titleContainer: {
     position: 'absolute',
     left: 0,
     right: 0,
-    top: 25,
-    bottom: 0,
+    bottom: 15,
     justifyContent: 'center', 
     alignItems: 'center',
     zIndex: -1,
   },
   titleText: {
-    fontSize: 26,
-    fontWeight: '600',
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#00FF9D',
+    letterSpacing: 2,
+    fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace', 
+    textTransform: 'uppercase',
   }
 });
