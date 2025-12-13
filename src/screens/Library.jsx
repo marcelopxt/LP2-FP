@@ -6,6 +6,7 @@ import {
     StyleSheet,
     useWindowDimensions,
     TouchableOpacity,
+    Platform,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useLibrary } from "../contexts/LibraryContext";
@@ -135,10 +136,19 @@ const styles = StyleSheet.create({
         backgroundColor: "#00FF9D",
         alignItems: "center",
         justifyContent: "center",
-        elevation: 5,
-        shadowColor: "#000",
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
+        ...Platform.select({
+            ios: {
+                shadowColor: "#000",
+                shadowOffset: { width: 0, height: 2 },
+                shadowOpacity: 0.25,
+                shadowRadius: 3.84,
+            },
+            android: {
+                elevation: 5,
+            },
+            web: {
+                boxShadow: "0px 2px 3.84px rgba(0, 0, 0, 0.25)",
+            },
+        }),
     },
 });
