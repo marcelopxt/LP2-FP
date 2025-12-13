@@ -8,7 +8,7 @@ export function usePopularGames() {
     const [hasMore, setHasMore] = useState(true);
     const [search, setSearch] = useState("");
     const [selectedGenre, setSelectedGenre] = useState(null);
-    const [sortBy, setSortBy] = useState("-metacritic");
+    const [sortBy, setSortBy] = useState("relevance");
 
     async function loadGames(isNewSearch = false, searchOverride = undefined) {
         if (loading) return;
@@ -23,7 +23,7 @@ export function usePopularGames() {
             page: currentPage,
             search: querySearch,
             genre: selectedGenre,
-            ordering: sortBy,
+            ordering: sortBy === "relevance" ? null : sortBy,
         });
 
         if (isNewSearch) {

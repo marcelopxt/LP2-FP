@@ -20,7 +20,7 @@ async function montarRequisicao(endpoint, filters) {
     }
 }
 
-async function getPopularGames({ page = 1, search = '', genre = null, ordering = '-metacritic' } = {}) {
+async function getPopularGames({ page = 1, search = '', genre = null, ordering = null } = {}) {
     try {
         const filters = {
             page_size: 20,

@@ -11,10 +11,12 @@ export default function SortList({ sortBy, onSortChange }) {
         >
             <Text style={styles.sortLabel}>SORT BY:</Text>
             {[
-                { id: "-metacritic", name: "TOP RATED" },
-                { id: "-released", name: "NEWEST" },
-                { id: "name", name: "NAME" },
-                { id: "-rating", name: "USER RATING" },
+                { id: "relevance", name: "Relevance" },
+                { id: "-created", name: "Date added" },
+                { id: "name", name: "Name" },
+                { id: "-released", name: "Release date" },
+                { id: "-added", name: "Popularity" },
+                { id: "-rating", name: "Average rating" },
             ].map((sort) => (
                 <TouchableOpacity
                     key={sort.id}
