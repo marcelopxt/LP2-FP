@@ -1,14 +1,11 @@
-import { Text } from "react-native";
-
-const games = {
-
-}
-
-function getGameByName(name){
-  
-}
+import { Text, View } from "react-native";
+import PopularGamesList from "../components/PopularGamesList";
 
 export default function Popular() {
-  return <Text> Games </Text>;
+  return(
+    <View>
+      <PopularGamesList/>
+    </View>
+  );
 
 }
