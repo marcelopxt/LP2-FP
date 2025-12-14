@@ -8,7 +8,7 @@ import {
   useWindowDimensions,
   Platform,
 } from "react-native";
-import { useLibrary } from "../contexts/LibraryContext";
+import { useLibrary } from "../dao/LibraryContext";
 import {
   PieChart,
   BarChart,
