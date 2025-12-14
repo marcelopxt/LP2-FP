@@ -52,17 +52,17 @@ export default function App() {
             <Tab.Screen
               name="Popular"
               component={Popular}
-              options={{ tabBarLabel: "NET.SEARCH" }}
+              options={{ tabBarLabel: "WEB.BUSCA" }}
             />
             <Tab.Screen
               name="Dashboard"
               component={Dashboard}
-              options={{ tabBarLabel: "SYS.DATA" }}
+              options={{ tabBarLabel: "SIS.DADOS" }}
             />
             <Tab.Screen
               name="Library"
               component={Library}
-              options={{ tabBarLabel: "MEM.CARD" }}
+              options={{ tabBarLabel: "MEM.CARTAO" }}
             />
           </Tab.Navigator>
         </NavigationContainer>

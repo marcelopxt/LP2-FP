@@ -34,9 +34,9 @@ export default function Library() {
     const EmptyLibrary = () => (
         <View style={styles.emptyContainer}>
             <Ionicons name="library-outline" size={80} color="#005535" />
-            <Text style={styles.emptyTitle}>Your library is empty</Text>
+            <Text style={styles.emptyTitle}>Sua biblioteca está vazia</Text>
             <Text style={styles.emptySubtitle}>
-                Tap the + button to add games!
+                Toque no + para adicionar jogos!
             </Text>
         </View>
     );
@@ -64,7 +64,7 @@ export default function Library() {
             />
             {loading && (
                 <BlurView intensity={50} tint="dark" style={styles.absoluteFill}>
-                    <Text style={{ color: "#00FF9D" }}>Loading Library...</Text>
+                    <Text style={{ color: "#00FF9D" }}>Carregando Biblioteca...</Text>
                 </BlurView>
             )}
 

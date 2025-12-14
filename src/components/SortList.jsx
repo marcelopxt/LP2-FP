@@ -9,14 +9,14 @@ export default function SortList({ sortBy, onSortChange }) {
             style={styles.sortList}
             contentContainerStyle={styles.sortListContent}
         >
-            <Text style={styles.sortLabel}>SORT BY:</Text>
+            <Text style={styles.sortLabel}>ORDENAR:</Text>
             {[
-                { id: "relevance", name: "Relevance" },
-                { id: "-created", name: "Date added" },
-                { id: "name", name: "Name" },
-                { id: "-released", name: "Release date" },
-                { id: "-added", name: "Popularity" },
-                { id: "-rating", name: "Average rating" },
+                { id: "relevance", name: "Relevância" },
+                { id: "-created", name: "Data de adição" },
+                { id: "name", name: "Nome" },
+                { id: "-released", name: "Lançamento" },
+                { id: "-added", name: "Popularidade" },
+                { id: "-rating", name: "Nota média" },
             ].map((sort) => (
                 <TouchableOpacity
                     key={sort.id}

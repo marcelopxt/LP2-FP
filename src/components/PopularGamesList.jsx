@@ -65,11 +65,11 @@ export default function PopularGamesList() {
         <View style={styles.feedbackContainer}>
           <Text style={styles.feedbackText}>
             {search.length > 0 && selectedGenre
-              ? `Results for "${search}" in ${GENRES.find((g) => g.id === selectedGenre)?.name
+              ? `Resultados para "${search}" em ${GENRES.find((g) => g.id === selectedGenre)?.name
               }`
               : search.length > 0
-                ? `Results for "${search}"`
-                : `Genre: ${GENRES.find((g) => g.id === selectedGenre)?.name}`}
+                ? `Resultados para "${search}"`
+                : `Gênero: ${GENRES.find((g) => g.id === selectedGenre)?.name}`}
           </Text>
         </View>
       )}
@@ -101,12 +101,12 @@ export default function PopularGamesList() {
                   size={64}
                   color="#005535"
                 />
-                <Text style={styles.emptyText}>No games found</Text>
+                <Text style={styles.emptyText}>Nenhum jogo encontrado</Text>
                 <TouchableOpacity
                   style={styles.clearButton}
                   onPress={handleClearSearch}
                 >
-                  <Text style={styles.clearButtonText}>CLEAR FILTERS</Text>
+                  <Text style={styles.clearButtonText}>LIMPAR FILTROS</Text>
                 </TouchableOpacity>
               </View>
             )
@@ -126,7 +126,7 @@ export default function PopularGamesList() {
           </BlurView>
         )}
       </View>
-    </View>
+    </View >
   );
 }
 

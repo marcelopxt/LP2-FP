@@ -12,10 +12,10 @@ import { Ionicons } from "@expo/vector-icons";
 import { BlurView } from "expo-blur";
 
 const STATUS_OPTIONS = [
-    { id: "played", label: "Played", icon: "checkmark-circle", color: "#6c3" },
-    { id: "playing", label: "Playing", icon: "game-controller", color: "#fc3" },
-    { id: "backlog", label: "Backlog", icon: "list", color: "#00FF9D" },
-    { id: "dropped", label: "Dropped", icon: "close-circle", color: "#f00" },
+    { id: "played", label: "Concluído", icon: "checkmark-circle", color: "#6c3" },
+    { id: "playing", label: "Jogando", icon: "game-controller", color: "#fc3" },
+    { id: "backlog", label: "Para Jogar", icon: "list", color: "#00FF9D" },
+    { id: "dropped", label: "Abandonado", icon: "close-circle", color: "#f00" },
 ];
 
 export default function GameLibraryModal({
@@ -74,7 +74,7 @@ export default function GameLibraryModal({
                 <View style={styles.content}>
                     <View style={styles.header}>
                         <Text style={styles.title} numberOfLines={1}>
-                            {currentEntry ? "Edit Library Entry" : "Add to Library"}
+                            {currentEntry ? "Editar Entrada" : "Adicionar à Biblioteca"}
                         </Text>
                         <TouchableOpacity onPress={onClose}>
                             <Ionicons name="close" size={24} color="#E0E0E0" />
@@ -112,7 +112,7 @@ export default function GameLibraryModal({
                             ))}
                         </View>
 
-                        <Text style={styles.label}>Rating (0-10)</Text>
+                        <Text style={styles.label}>Nota (0-10)</Text>
                         <TextInput
                             style={styles.input}
                             placeholder="Ex: 8.5"
@@ -123,10 +123,10 @@ export default function GameLibraryModal({
                             maxLength={4}
                         />
 
-                        <Text style={styles.label}>Comment</Text>
+                        <Text style={styles.label}>Comentário</Text>
                         <TextInput
                             style={[styles.input, styles.textArea]}
-                            placeholder="What do you think about this game?"
+                            placeholder="O que você acha deste jogo?"
                             placeholderTextColor="#555"
                             multiline
                             value={comment}
@@ -144,7 +144,7 @@ export default function GameLibraryModal({
                             </TouchableOpacity>
                         )}
                         <TouchableOpacity style={styles.saveButton} onPress={handleSave}>
-                            <Text style={styles.saveButtonText}>SAVE</Text>
+                            <Text style={styles.saveButtonText}>SALVAR</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

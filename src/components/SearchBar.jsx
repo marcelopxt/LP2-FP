@@ -13,7 +13,7 @@ export default function SearchBar({ search, setSearch, onSubmit, onClear }) {
             />
             <TextInput
                 style={styles.input}
-                placeholder="SEARCH_GAMES..."
+                placeholder="BUSCAR_JOGOS..."
                 placeholderTextColor="#005535"
                 value={search}
                 onChangeText={setSearch}

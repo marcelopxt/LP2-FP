@@ -2,12 +2,12 @@ import React from "react";
 import { ScrollView, TouchableOpacity, Text, StyleSheet } from "react-native";
 
 const GENRES = [
-    { id: "action", name: "Action" },
-    { id: "adventure", name: "Adventure" },
+    { id: "action", name: "Ação" },
+    { id: "adventure", name: "Aventura" },
     { id: "role-playing-games-rpg", name: "RPG" },
-    { id: "shooter", name: "Shooter" },
+    { id: "shooter", name: "Tiro" },
     { id: "indie", name: "Indie" },
-    { id: "strategy", name: "Strategy" },
+    { id: "strategy", name: "Estratégia" },
 ];
 
 export default function GenreList({ selectedGenre, onSelectGenre }) {
@@ -27,7 +27,7 @@ export default function GenreList({ selectedGenre, onSelectGenre }) {
                         selectedGenre === null && styles.chipTextSelected,
                     ]}
                 >
-                    ALL
+                    TODOS
                 </Text>
             </TouchableOpacity>
 

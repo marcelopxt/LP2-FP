@@ -40,7 +40,7 @@ export default function Dashboard() {
     return (
       <View style={styles.emptyContainer}>
         <Text style={styles.emptyText}>
-          Add games to your library to see stats!
+          Adicione jogos para ver estatísticas!
         </Text>
       </View>
     );
@@ -56,28 +56,28 @@ export default function Dashboard() {
 
   const pieData = [
     {
-      name: "Played",
+      name: "Concluído",
       population: statusCounts["played"] || 0,
       color: "#6c3",
       legendFontColor: "#bbb",
       legendFontSize: 12,
     },
     {
-      name: "Playing",
+      name: "Jogando",
       population: statusCounts["playing"] || 0,
       color: "#fc3",
       legendFontColor: "#bbb",
       legendFontSize: 12,
     },
     {
-      name: "Backlog",
+      name: "Para Jogar",
       population: statusCounts["backlog"] || 0,
       color: "#00FF9D",
       legendFontColor: "#bbb",
       legendFontSize: 12,
     },
     {
-      name: "Dropped",
+      name: "Abandonado",
       population: statusCounts["dropped"] || 0,
       color: "#f00",
       legendFontColor: "#bbb",
@@ -98,8 +98,8 @@ export default function Dashboard() {
   library.forEach((item) =>
     item.game.parent_platforms?.forEach(
       (p) =>
-        (platformCounts[p.platform.name] =
-          (platformCounts[p.platform.name] || 0) + 1)
+      (platformCounts[p.platform.name] =
+        (platformCounts[p.platform.name] || 0) + 1)
     )
   );
   const sortedPlatforms = Object.entries(platformCounts)
@@ -141,7 +141,7 @@ export default function Dashboard() {
     if (i.game.metacritic) metaSum[i.status]?.push(i.game.metacritic);
   });
   const metaData = {
-    labels: ["Played", "Playing", "Backlog", "Dropped"],
+    labels: ["Concluído", "Jogando", "Para Jogar", "Abandonado"],
     datasets: [
       {
         data: ["played", "playing", "backlog", "dropped"].map((s) =>
@@ -166,7 +166,7 @@ export default function Dashboard() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <Text style={styles.headerTitle}>Analytics</Text>
+      <Text style={styles.headerTitle}>Estatísticas</Text>
       <View
         style={[
           styles.grid,
@@ -183,7 +183,7 @@ export default function Dashboard() {
             { width: attributeWidth(isLargeScreen, cardWidth, "half") },
           ]}
         >
-          <Text style={styles.cardTitle}>Stats Overview</Text>
+          <Text style={styles.cardTitle}>Resumo Geral</Text>
           <View style={styles.statsRow}>
             <View style={styles.statItem}>
               <ProgressChart
@@ -198,17 +198,17 @@ export default function Dashboard() {
                 }}
                 hideLegend={true}
               />
-              <Text style={styles.statLabel}>Completion</Text>
+              <Text style={styles.statLabel}>Conclusão</Text>
             </View>
             <View style={styles.statTextContainer}>
               <Text style={styles.bigNumber}>{totalGames}</Text>
-              <Text style={styles.subText}>Total Games</Text>
+              <Text style={styles.subText}>Total de Jogos</Text>
             </View>
             <View style={styles.statTextContainer}>
               <Text style={[styles.bigNumber, { color: "#fc3" }]}>
                 {statusCounts["playing"] || 0}
               </Text>
-              <Text style={styles.subText}>Playing</Text>
+              <Text style={styles.subText}>Jogando</Text>
             </View>
           </View>
         </View>
@@ -218,7 +218,7 @@ export default function Dashboard() {
             { width: attributeWidth(isLargeScreen, cardWidth, "half") },
           ]}
         >
-          <Text style={styles.cardTitle}>Library Status</Text>
+          <Text style={styles.cardTitle}>Status da Biblioteca</Text>
           <PieChart
             data={pieData}
             width={chartWidth}
@@ -232,7 +232,7 @@ export default function Dashboard() {
           />
         </View>
         <View style={[styles.card, { width: cardWidth }]}>
-          <Text style={styles.cardTitle}>Your Ratings</Text>
+          <Text style={styles.cardTitle}>Suas Notas</Text>
           <BarChart
             data={ratingData}
             width={chartWidth}
@@ -246,7 +246,7 @@ export default function Dashboard() {
           />
         </View>
         <View style={[styles.card, { width: cardWidth }]}>
-          <Text style={styles.cardTitle}>Top Genres</Text>
+          <Text style={styles.cardTitle}>Top Gêneros</Text>
           {sortedGenres.length > 0 ? (
             <BarChart
               data={genreData}
@@ -260,11 +260,11 @@ export default function Dashboard() {
               withInnerLines={false}
             />
           ) : (
-            <Text style={styles.noData}>No data</Text>
+            <Text style={styles.noData}>Sem dados</Text>
           )}
         </View>
         <View style={[styles.card, { width: cardWidth }]}>
-          <Text style={styles.cardTitle}>Platforms</Text>
+          <Text style={styles.cardTitle}>Plataformas</Text>
           {sortedPlatforms.length > 0 ? (
             <BarChart
               data={platformData}
@@ -278,11 +278,11 @@ export default function Dashboard() {
               withInnerLines={false}
             />
           ) : (
-            <Text style={styles.noData}>No data</Text>
+            <Text style={styles.noData}>Sem dados</Text>
           )}
         </View>
         <View style={[styles.card, { width: cardWidth }]}>
-          <Text style={styles.cardTitle}>Collection by Era</Text>
+          <Text style={styles.cardTitle}>Coleção por Década</Text>
           <LineChart
             data={decadeData}
             width={chartWidth}
