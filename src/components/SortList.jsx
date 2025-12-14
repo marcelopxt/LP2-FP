@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     sortLabel: {
-        color: "#005535",
+        color: "#038a37ff",
         fontFamily: "monospace",
         fontWeight: "bold",
         marginRight: 10,
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         paddingVertical: 4,
         borderRadius: 16,
         borderWidth: 1,
-        borderColor: "#005535",
+        borderColor: "#009c27ff",
         marginRight: 8,
         backgroundColor: "#0a0a0a",
     },
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
         borderColor: "#005535",
     },
     sortChipText: {
-        color: "#005535",
+        color: "#009c27ff",
         fontFamily: "monospace",
         fontSize: 12,
         fontWeight: "bold",

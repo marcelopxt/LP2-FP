@@ -8,14 +8,6 @@ export default function Header() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#121212" />
-
-      <TouchableOpacity 
-         style={styles.leftContainer}
-         onPress={() => navigation.navigate('Popular')}
-      >
-        <Ionicons name="terminal" size={24} color="#00FF9D" />
-      </TouchableOpacity>
-
       <View style={styles.titleContainer}>
         <Text style={styles.titleText}>SAVE_POINT_SYSTEM</Text>
       </View>

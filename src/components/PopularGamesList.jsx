@@ -138,9 +138,9 @@ const styles = StyleSheet.create({
   filterContainer: {
     padding: 20,
     paddingBottom: 10,
-    backgroundColor: "#121212",
+    backgroundColor: "#000000ff",
     borderBottomWidth: 1,
-    borderBottomColor: "#005535",
+    borderBottomColor: "#037d4eff",
   },
   feedbackContainer: {
     paddingHorizontal: 20,

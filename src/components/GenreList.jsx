@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         paddingVertical: 6,
         borderRadius: 20,
         borderWidth: 1,
-        borderColor: "#005535",
+        borderColor: "#009c27ff",
         marginRight: 10,
         backgroundColor: "#0a0a0a",
     },
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         borderColor: "#00FF9D",
     },
     chipText: {
-        color: "#005535",
+        color: "#009c27ff",
         fontFamily: "monospace",
         fontWeight: "bold",
     },
