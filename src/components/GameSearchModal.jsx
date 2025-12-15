@@ -111,7 +111,7 @@ export default function GameSearchModal({ visible, onClose }) {
           <View style={styles.handleBar} />
 
           <View style={styles.header}>
-            <Text style={styles.title}>Add New Game</Text>
+            <Text style={styles.title}>Adicione um novo jogo</Text>
             <TouchableOpacity onPress={onClose}>
               <Ionicons name="close" size={24} color="#888" />
             </TouchableOpacity>
@@ -136,8 +136,8 @@ export default function GameSearchModal({ visible, onClose }) {
                 <View style={styles.emptyContainer}>
                   <Text style={styles.emptyText}>
                     {confirmedSearch.length > 0
-                      ? "No games found"
-                      : "Search for a game to add"}
+                      ? "Nenhum jogo encontrado"
+                      : "Procure um jogo para adicionar à sua biblioteca!"}
                   </Text>
                 </View>
               )
